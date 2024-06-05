@@ -1,0 +1,30 @@
+<html>  
+<head>  
+    <title>text_classifier</title>  
+</head>  
+<body>  
+    <form action = "/" method = "post">  
+        <label for="Text">Text:</label>
+        <textarea name="nm"></textarea>         
+        <input type = "submit"></button>          
+    </form>  
+    <div>
+
+      {% if name == 'positive' %}
+        <img src="static/ok.jpg" alt="User Image">
+        <p>{{name}}</p>
+        <p>{{score}}</p>
+      {% elif name == 'negative' %}
+        <img src="static/no.jpg" alt="User Image">
+        <p>{{name}}</p>
+        <p>{{score}}</p>
+      {% else %}
+        <p>{{name}}</p>
+        <p>{{score}}</p>
+      {% endif %}
+
+
+
+    </div>
+</body>  
+</html>  
